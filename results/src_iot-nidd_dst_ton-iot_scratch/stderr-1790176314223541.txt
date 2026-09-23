@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/home/laxita/mine/incremental-nids/src/main.py", line 284, in <module>
+    main()
+    ~~~~^^
+  File "/home/laxita/mine/incremental-nids/src/main.py", line 174, in main
+    trn_loader, val_loader, tst_loader, taskcla = get_loaders(
+                                                  ~~~~~~~~~~~^
+        args.datasets, args.num_tasks, args.nc_first_task, args.nc_incr_tasks, args.batch_size,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        validation=args.validation, num_workers=0, num_pkts=args.num_pkts, fields=args.fields, seed=args.seed,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/laxita/mine/incremental-nids/src/datasets/data_loader.py", line 24, in get_loaders
+    trn_dset, val_dset, tst_dset, curtaskcla, labels_dict, class_order = get_datasets(
+                                                                         ~~~~~~~~~~~~^
+        cur_dataset, dc['path'], num_tasks, nc_first_task,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        seed=seed,
+        ^^^^^^^^^^
+    )
+    ^
+  File "/home/laxita/mine/incremental-nids/src/datasets/data_loader.py", line 97, in get_datasets
+    all_data, taskcla, class_indices, labels_dict, class_order = netdat.get_data(
+                                                                 ~~~~~~~~~~~~~~~^
+        path, num_tasks=num_tasks, nc_first_task=nc_first_task,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        class_order=class_order, num_pkts=num_pkts, fields=fields, seed=seed
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/laxita/mine/incremental-nids/src/datasets/networking_dataset.py", line 72, in get_data
+    df = pd.read_parquet(full_path)
+  File "/home/laxita/.local/lib/python3.13/site-packages/pandas/io/parquet.py", line 671, in read_parquet
+    return impl.read(
+           ~~~~~~~~~^
+        path,
+        ^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/laxita/.local/lib/python3.13/site-packages/pandas/io/parquet.py", line 253, in read
+    path_or_handle, handles, filesystem = _get_path_or_handle(
+                                          ~~~~~~~~~~~~~~~~~~~^
+        path,
+        ^^^^^
+    ...<2 lines>...
+        mode="rb",
+        ^^^^^^^^^^
+    )
+    ^
+  File "/home/laxita/.local/lib/python3.13/site-packages/pandas/io/parquet.py", line 141, in _get_path_or_handle
+    handles = get_handle(
+        path_or_handle, mode, is_text=False, storage_options=storage_options
+    )
+  File "/home/laxita/.local/lib/python3.13/site-packages/pandas/io/common.py", line 939, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/uniform_label/iot-nidd_dwn10p.parquet'

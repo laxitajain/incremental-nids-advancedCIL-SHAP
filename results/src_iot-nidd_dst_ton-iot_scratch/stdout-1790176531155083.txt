@@ -1,0 +1,45 @@
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='str')
+Class order:  [6, 5, 1, 0, 2, 4, 9, 7, 8, 3]
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='str')
+Class order:  [3, 0, 8, 6, 11, 10, 1, 4, 7, 9, 2, 5]
+[ 2  3  6  7  9 10 11 12 13 14 15 16]
+[(0, 12)]
+[[6, 5, 1, 0, 2, 4, 9, 7, 8, 3], [np.int64(11), np.int64(9), np.int64(13), np.int64(2), np.int64(16), np.int64(15), np.int64(3), np.int64(6), np.int64(7), np.int64(14), np.int64(10), np.int64(12)]] [(1, 7)]
+max_task=2
+Lopez17CNN
+LLL_Net(
+  (model): Lopez17CNN(
+    (conv1): Conv2d(1, 32, kernel_size=(4, 2), stride=(1, 1))
+    (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+    (conv2): Conv2d(32, 64, kernel_size=(4, 2), stride=(1, 1))
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+    (fc1): Linear(in_features=2560, out_features=200, bias=True)
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time=1.520s | Train: skip eval | Valid: time=0.133s loss=0.800, TAw acc=47.503% | *
+| Epoch   2, time=1.339s | Train: skip eval | Valid: time=0.146s loss=0.533, TAw acc=84.813% | *
+| Epoch   3, time=1.331s | Train: skip eval | Valid: time=0.143s loss=6.133, TAw acc=50.000% |
+
+| Epoch   4, time=1.336s | Train: skip eval | Valid: time=0.142s loss=0.452, TAw acc=89.667% | *
+| Epoch   5, time=1.322s | Train: skip eval | Valid: time=0.146s loss=0.364, TAw acc=89.736% | *
+| Epoch   6, time=1.342s | Train: skip eval | Valid: time=0.142s loss=0.311, TAw acc=92.094% | *
+| Epoch   7, time=1.330s | Train: skip eval | Valid: time=0.142s loss=0.320, TAw acc=91.262% |
+
+| Epoch   8, time=1.330s | Train: skip eval | Valid: time=0.142s loss=0.461, TAw acc=80.721% |
+
+| Epoch   9, time=1.332s | Train: skip eval | Valid: time=0.141s loss=0.302, TAw acc=92.441% | *
+| Epoch  10, time=1.327s | Train: skip eval | Valid: time=0.141s loss=0.305, TAw acc=93.135% |
+
+| Train Time: pre_train=0.001s, train=15.999s, post_train=0.000s |
+Saving logits...

@@ -1,0 +1,5 @@
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='str')
+Class order:  [6, 5, 1, 0, 2, 4, 9, 7, 8, 3]

@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/laxita/mine/incremental-nids/src/main.py", line 284, in <module>
+    main()
+    ~~~~^^
+  File "/home/laxita/mine/incremental-nids/src/main.py", line 216, in main
+    appr.train(t, trn_loader[t], val_loader[t])
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laxita/mine/incremental-nids/src/approach/incremental_learning.py", line 80, in train
+    self.post_train_process(t, trn_loader, val_loader)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laxita/mine/incremental-nids/src/approach/der.py", line 70, in post_train_process
+    self.exemplars_dataset.collect_exemplars(self.model, trn_loader, val_loader.dataset.transform)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laxita/mine/incremental-nids/src/datasets/exemplars_dataset.py", line 42, in collect_exemplars
+    self.images, self.labels = self.exemplars_selector(
+                               ~~~~~~~~~~~~~~~~~~~~~~~^
+        model, trn_loader, selection_transform, t, from_inputs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laxita/mine/incremental-nids/src/datasets/exemplars_selection.py", line 38, in __call__
+    selected_indices = self._select_indices(
+        tmp_model, sel_loader, exemplars_per_class, transform, from_inputs)
+  File "/home/laxita/mine/incremental-nids/src/datasets/exemplars_selection.py", line 81, in _select_indices
+    assert (len(cls_ind) > 0), "No samples to choose from for class {:d}".format(curr_cls)
+            ^^^^^^^^^^^^^^^^
+AssertionError: No samples to choose from for class 0

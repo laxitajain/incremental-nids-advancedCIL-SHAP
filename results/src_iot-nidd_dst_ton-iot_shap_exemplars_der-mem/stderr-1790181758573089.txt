@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/home/laxita/mine/incremental-nids/src/main.py", line 284, in <module>
+    main()
+    ~~~~^^
+  File "/home/laxita/mine/incremental-nids/src/main.py", line 216, in main
+    appr.train(t, trn_loader[t], val_loader[t])
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laxita/mine/incremental-nids/src/approach/incremental_learning.py", line 77, in train
+    trn_loader = self.train_loop(t, trn_loader, val_loader)
+  File "/home/laxita/mine/incremental-nids/src/approach/der.py", line 62, in train_loop
+    return super().train_loop(t, trn_loader, val_loader)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laxita/mine/incremental-nids/src/approach/incremental_learning.py", line 109, in train_loop
+    self.train_epoch(t, trn_loader)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/laxita/mine/incremental-nids/src/approach/der.py", line 136, in train_epoch
+    outputs = self.model(images)
+  File "/home/laxita/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/laxita/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/laxita/mine/incremental-nids/src/networks/network.py", line 56, in forward
+    x = self.model.extract_features(x)
+  File "/home/laxita/mine/incremental-nids/src/networks/lopez17cnn.py", line 86, in extract_features
+    out = F.relu(self.conv2(out))
+  File "/home/laxita/.local/lib/python3.13/site-packages/torch/nn/functional.py", line 1777, in relu
+    result = torch.relu(input)
+KeyboardInterrupt

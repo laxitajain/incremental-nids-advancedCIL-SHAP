@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/laxita/mine/incremental-nids/src/main.py", line 284, in <module>
+    main()
+    ~~~~^^
+  File "/home/laxita/mine/incremental-nids/src/main.py", line 218, in main
+    appr.save_logits(t, trn_loader, args.seed)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/laxita/mine/incremental-nids/src/approach/incremental_learning.py", line 269, in save_logits
+    df_model = df_model._append(pd.DataFrame({'Inputs': [images_tot],
+               ^^^^^^^^^^^^^^^^
+  File "/home/laxita/.local/lib/python3.13/site-packages/pandas/core/generic.py", line 6194, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute '_append'

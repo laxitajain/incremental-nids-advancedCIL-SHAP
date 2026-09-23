@@ -1,0 +1,73 @@
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='str')
+Class order:  [6, 5, 1, 0, 2, 4, 9, 7, 8, 3]
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='str')
+Class order:  [3, 0, 8, 6, 11, 10, 1, 4, 7, 9, 2, 5]
+[ 2  3  6  7  9 10 11 12 13 14 15 16]
+[(0, 12)]
+[[6, 5, 1, 0, 2, 4, 9, 7, 8, 3], [np.int64(11), np.int64(9), np.int64(13), np.int64(2), np.int64(16), np.int64(15), np.int64(3), np.int64(6), np.int64(7), np.int64(14), np.int64(10), np.int64(12)]] [(1, 7)]
+max_task=2
+Lopez17CNN
+LLL_Net(
+  (model): Lopez17CNN(
+    (conv1): Conv2d(1, 32, kernel_size=(4, 2), stride=(1, 1))
+    (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+    (conv2): Conv2d(32, 64, kernel_size=(4, 2), stride=(1, 1))
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+    (fc1): Linear(in_features=2560, out_features=200, bias=True)
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time=1.515s | Train: skip eval | Valid: time=0.101s loss=0.800, TAw acc=47.503% | *
+DER: Collecting exemplars and computing dark experience for task 0...
+WARNING: Not enough samples to store for class 8: selected ALL.
+| Selected 99 train exemplars, time=  0.0s
+ > Dark experience stored (99 samples), time=0.011s
+| Train Time: pre_train=0.000s, train=1.620s, post_train=0.011s |
+Saving logits...
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=1.707 | TAw acc=37.519%, forg=0.000%| TAg acc=37.519%, forg=0.000%, time= 0.404, Num_instances= 6013 <<<
+Save at ../results/smoke_der_fix_der-mem
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time=3.164s | Train: skip eval | Valid: time=0.117s loss=0.494, TAw acc=88.642% | *
+DER: Collecting exemplars and computing dark experience for task 1...
+| Selected 102 train exemplars, time=  0.0s
+ > Dark experience stored (102 samples), time=0.011s
+| Train Time: pre_train=0.000s, train=3.287s, post_train=0.011s |
+Saving logits...
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=3.338 | TAw acc=24.780%, forg=12.739%| TAg acc=24.281%, forg=13.238%, time= 0.351, Num_instances= 6013 <<<
+>>> Test on task  1 : loss=0.452 | TAw acc=89.999%, forg=0.000%| TAg acc=87.256%, forg=0.000%, time= 0.524, Num_instances= 8459 <<<
+Save at ../results/smoke_der_fix_der-mem
+************************************************************************************************************
+TAw Acc
+	 37.5%   0.0% 	Avg.: 37.5% 
+	 24.8%  90.0% 	Avg.: 57.4% 
+************************************************************************************************************
+TAg Acc
+	 37.5%   0.0% 	Avg.: 37.5% 
+	 24.3%  87.3% 	Avg.: 55.8% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0% 
+	 12.7%   0.0% 	Avg.: 12.7% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0% 
+	 13.2%   0.0% 	Avg.: 13.2% 
+************************************************************************************************************
+[Elapsed time = 0.0 h]
+Done!

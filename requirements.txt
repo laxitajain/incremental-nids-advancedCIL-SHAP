@@ -1,0 +1,16 @@
+GitPython
+matplotlib
+numpy
+pandas
+Pillow
+pyarrow
+python_box
+scikit_learn
+scipy
+seaborn
+torch
+torchvision
+tqdm
+umap_learn
+shap
+ipykernel

@@ -1,0 +1,72 @@
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='str')
+Class order:  [6, 5, 1, 0, 2, 4, 9, 7, 8, 3]
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='str')
+Class order:  [3, 0, 8, 6, 11, 10, 1, 4, 7, 9, 2, 5]
+[ 2  3  6  7  9 10 11 12 13 14 15 16]
+[(0, 12)]
+[[6, 5, 1, 0, 2, 4, 9, 7, 8, 3], [np.int64(11), np.int64(9), np.int64(13), np.int64(2), np.int64(16), np.int64(15), np.int64(3), np.int64(6), np.int64(7), np.int64(14), np.int64(10), np.int64(12)]] [(1, 7)]
+max_task=2
+Lopez17CNN
+LLL_Net(
+  (model): Lopez17CNN(
+    (conv1): Conv2d(1, 32, kernel_size=(4, 2), stride=(1, 1))
+    (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+    (conv2): Conv2d(32, 64, kernel_size=(4, 2), stride=(1, 1))
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+    (fc1): Linear(in_features=2560, out_features=200, bias=True)
+    (fc): Sequential()
+    (shap_attention): ShapAttention()
+  )
+  (heads): ModuleList()
+)
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time=2.084s | Train: skip eval | Valid: time=0.163s loss=0.800, TAw acc=47.503% | *
+| Epoch   2, time=1.424s | Train: skip eval | Valid: time=0.158s loss=0.533, TAw acc=84.813% | *
+| Epoch   3, time=1.428s | Train: skip eval | Valid: time=0.156s loss=6.133, TAw acc=50.000% |
+
+| Epoch   4, time=1.657s | Train: skip eval | Valid: time=0.158s loss=0.452, TAw acc=89.667% | *
+| Epoch   5, time=1.457s | Train: skip eval | Valid: time=0.156s loss=0.364, TAw acc=89.736% | *
+| Epoch   6, time=1.448s | Train: skip eval | Valid: time=0.155s loss=0.311, TAw acc=92.094% | *
+| Epoch   7, time=1.458s | Train: skip eval | Valid: time=0.156s loss=0.320, TAw acc=91.262% |
+
+| Epoch   8, time=1.454s | Train: skip eval | Valid: time=0.155s loss=0.461, TAw acc=80.721% |
+
+| Epoch   9, time=1.451s | Train: skip eval | Valid: time=0.155s loss=0.302, TAw acc=92.441% | *
+| Epoch  10, time=1.449s | Train: skip eval | Valid: time=0.155s loss=0.305, TAw acc=93.135% |
+
+Computing Fisher Information Matrix for task 0...
+ > Fisher computation done, time=41.083s
+| Train Time: pre_train=0.000s, train=16.895s, post_train=41.083s |
+Saving logits...
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.257 | TAw acc=93.265%, forg=0.000%| TAg acc=93.265%, forg=0.000%, time= 0.526, Num_instances= 6013 <<<
+Save at ../results/src_iot-nidd_dst_ton-iot_shap_weighted_ewc
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time=3.066s | Train: skip eval | Valid: time=0.287s loss=4127421819.671, TAw acc=37.961% | *
+| Epoch   2, time=2.936s | Train: skip eval | Valid: time=0.261s loss=4127421819.671, TAw acc=37.961% |
+
+| Epoch   3, time=3.041s | Train: skip eval | Valid: time=0.267s loss=4127421811.400, TAw acc=37.961% | *
+| Epoch   4, time=2.929s | Train: skip eval | Valid: time=0.251s loss=4127421811.400, TAw acc=37.961% |
+
+| Epoch   5, time=3.083s | Train: skip eval | Valid: time=0.246s loss=4127421753.506, TAw acc=37.961% | *
+| Epoch   6, time=4.009s | Train: skip eval | Valid: time=0.262s loss=4127421753.506, TAw acc=37.961% |
+
+| Epoch   7, time=81.283s | Train: skip eval | Valid: time=7.036s loss=4127421753.506, TAw acc=37.961% |
+
+| Epoch   8, time=162.157s | Train: skip eval | Valid: time=6.670s loss=4127421753.506, TAw acc=37.961% |
+
+| Epoch   9, time=149.506s | Train: skip eval | Valid: time=5.245s loss=4127421745.236, TAw acc=37.961% | *
+| Epoch  10, time=156.836s | Train: skip eval | Valid: time=6.745s loss=4127421753.506, TAw acc=37.961% |
+
+Computing Fisher Information Matrix for task 1...

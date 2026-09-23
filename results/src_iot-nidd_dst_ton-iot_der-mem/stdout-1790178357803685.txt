@@ -1,0 +1,101 @@
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='str')
+Class order:  [6, 5, 1, 0, 2, 4, 9, 7, 8, 3]
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='str')
+Class order:  [3, 0, 8, 6, 11, 10, 1, 4, 7, 9, 2, 5]
+[ 2  3  6  7  9 10 11 12 13 14 15 16]
+[(0, 12)]
+[[6, 5, 1, 0, 2, 4, 9, 7, 8, 3], [np.int64(11), np.int64(9), np.int64(13), np.int64(2), np.int64(16), np.int64(15), np.int64(3), np.int64(6), np.int64(7), np.int64(14), np.int64(10), np.int64(12)]] [(1, 7)]
+max_task=2
+Lopez17CNN
+LLL_Net(
+  (model): Lopez17CNN(
+    (conv1): Conv2d(1, 32, kernel_size=(4, 2), stride=(1, 1))
+    (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+    (conv2): Conv2d(32, 64, kernel_size=(4, 2), stride=(1, 1))
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+    (fc1): Linear(in_features=2560, out_features=200, bias=True)
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time=1.053s | Train: skip eval | Valid: time=0.077s loss=0.800, TAw acc=47.503% | *
+| Epoch   2, time=1.124s | Train: skip eval | Valid: time=0.088s loss=0.533, TAw acc=84.813% | *
+| Epoch   3, time=1.175s | Train: skip eval | Valid: time=0.085s loss=6.133, TAw acc=50.000% |
+
+| Epoch   4, time=1.201s | Train: skip eval | Valid: time=0.089s loss=0.452, TAw acc=89.667% | *
+| Epoch   5, time=1.278s | Train: skip eval | Valid: time=0.086s loss=0.364, TAw acc=89.736% | *
+| Epoch   6, time=1.182s | Train: skip eval | Valid: time=0.084s loss=0.311, TAw acc=92.094% | *
+| Epoch   7, time=1.198s | Train: skip eval | Valid: time=0.085s loss=0.320, TAw acc=91.262% |
+
+| Epoch   8, time=1.195s | Train: skip eval | Valid: time=0.090s loss=0.461, TAw acc=80.721% |
+
+| Epoch   9, time=1.451s | Train: skip eval | Valid: time=0.091s loss=0.302, TAw acc=92.441% | *
+| Epoch  10, time=1.246s | Train: skip eval | Valid: time=0.091s loss=0.305, TAw acc=93.135% |
+
+DER: Collecting exemplars and computing dark experience for task 0...
+WARNING: Not enough samples to store for class 8: selected ALL.
+| Selected 99 train exemplars, time=  0.0s
+ > Dark experience stored (99 samples), time=0.011s
+| Train Time: pre_train=0.000s, train=12.980s, post_train=0.011s |
+Saving logits...
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.731 | TAw acc=67.088%, forg=0.000%| TAg acc=67.088%, forg=0.000%, time= 0.325, Num_instances= 6013 <<<
+Save at ../results/src_iot-nidd_dst_ton-iot_der-mem
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time=3.199s | Train: skip eval | Valid: time=0.118s loss=0.673, TAw acc=85.209% | *
+| Epoch   2, time=3.448s | Train: skip eval | Valid: time=0.117s loss=0.383, TAw acc=90.813% | *
+| Epoch   3, time=3.187s | Train: skip eval | Valid: time=0.121s loss=0.454, TAw acc=90.056% |
+
+| Epoch   4, time=3.870s | Train: skip eval | Valid: time=0.217s loss=0.385, TAw acc=90.813% |
+
+| Epoch   5, time=3.845s | Train: skip eval | Valid: time=0.116s loss=0.538, TAw acc=85.664% |
+
+| Epoch   6, time=3.151s | Train: skip eval | Valid: time=0.123s loss=0.303, TAw acc=93.387% | *
+| Epoch   7, time=3.263s | Train: skip eval | Valid: time=0.116s loss=0.310, TAw acc=90.964% |
+
+| Epoch   8, time=3.159s | Train: skip eval | Valid: time=0.120s loss=0.210, TAw acc=95.356% | *
+| Epoch   9, time=3.777s | Train: skip eval | Valid: time=0.119s loss=0.224, TAw acc=95.356% |
+
+| Epoch  10, time=3.560s | Train: skip eval | Valid: time=0.211s loss=0.286, TAw acc=94.397% |
+
+DER: Collecting exemplars and computing dark experience for task 1...
+| Selected 102 train exemplars, time=  0.0s
+ > Dark experience stored (102 samples), time=0.016s
+| Train Time: pre_train=0.000s, train=35.850s, post_train=0.016s |
+Saving logits...
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=3.995 | TAw acc=30.916%, forg=36.172%| TAg acc=29.270%, forg=37.818%, time= 0.323, Num_instances= 6013 <<<
+>>> Test on task  1 : loss=0.175 | TAw acc=95.484%, forg=0.000%| TAg acc=94.976%, forg=0.000%, time= 0.512, Num_instances= 8459 <<<
+Save at ../results/src_iot-nidd_dst_ton-iot_der-mem
+************************************************************************************************************
+TAw Acc
+	 67.1%   0.0% 	Avg.: 67.1% 
+	 30.9%  95.5% 	Avg.: 63.2% 
+************************************************************************************************************
+TAg Acc
+	 67.1%   0.0% 	Avg.: 67.1% 
+	 29.3%  95.0% 	Avg.: 62.1% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0% 
+	 36.2%   0.0% 	Avg.: 36.2% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0% 
+	 37.8%   0.0% 	Avg.: 37.8% 
+************************************************************************************************************
+[Elapsed time = 0.0 h]
+Done!
