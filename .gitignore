@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local logs and editor files
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# Local project documents and downloaded template
+/EAAI_25_260730_115740.pdf
+/implementation_plan.md
+/install_cpu_requirements.sh
+/walkthrough.md
+/IEEE_Conference_Template/
+/docs/research_methodology_results.md
+/docs/results_summary.md

@@ -30,6 +30,18 @@ def _last_scalar_from_txt(filename):
         return float(arr[-1])
     return float(arr[-1, -1])
 
+
+def _last_row_first_col_from_txt(filename):
+    if not filename or not os.path.exists(filename):
+        return np.nan
+    arr = np.loadtxt(filename)
+    arr = np.asarray(arr)
+    if arr.ndim == 0:
+        return float(arr)
+    if arr.ndim == 1:
+        return float(arr[0])
+    return float(arr[-1, 0])
+
 def main():
     results_dir = "../results"
     
@@ -66,10 +78,11 @@ def main():
                     task1_recall = _mean_from_cell(df.iloc[1]['recall_score'])
 
                 task1_acc = _last_scalar_from_txt(acc_file)
-                task1_forg = _last_scalar_from_txt(forg_file)
+                task1_forg = _last_row_first_col_from_txt(forg_file)
 
                 results.append({
                     'Approach': name,
+                    'Source Retention': _last_row_first_col_from_txt(acc_file),
                     'Task 1 Acc': task1_acc,
                     'Task 1 Forgetting': task1_forg,
                     'Task 1 Macro F1': task1_f1,
